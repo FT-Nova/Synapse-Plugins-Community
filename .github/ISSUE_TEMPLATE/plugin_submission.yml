@@ -1,0 +1,245 @@
+name: Plugin Submission
+description: Submit a new plugin to the Synapse Community Plugin repository
+title: "[PLUGIN] "
+labels: ["new-plugin", "needs-review"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Submit Your Plugin to Synapse Community
+        
+        Thanks for contributing to the Synapse ecosystem! Please fill out the following information about your plugin.
+        
+        **Before submitting:**
+        - Ensure your plugin follows the [contribution guidelines](../CONTRIBUTING.md)
+        - Test your plugin thoroughly
+        - Include comprehensive documentation
+        - Follow the Synapse plugin structure and naming conventions
+
+  - type: input
+    id: plugin-name
+    attributes:
+      label: Plugin Name
+      description: The name of your plugin (should match the folder name)
+      placeholder: e.g., my-awesome-plugin
+    validations:
+      required: true
+
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Initial Version
+      description: The initial version number (follow semantic versioning)
+      placeholder: e.g., 1.0.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Plugin Description
+      description: A clear and concise description of what your plugin does
+      placeholder: This plugin provides...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Plugin Category
+      description: What category does your plugin fit into?
+      options:
+        - Productivity
+        - Development Tools
+        - Communication
+        - Data Processing
+        - Integration
+        - Utilities
+        - AI/ML
+        - Security
+        - Media
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: features
+    attributes:
+      label: Key Features
+      description: List the main features of your plugin
+      placeholder: |
+        - Feature 1
+        - Feature 2
+        - Feature 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Use Cases
+      description: Describe common use cases for your plugin
+      placeholder: |
+        1. When users need to...
+        2. For scenarios where...
+    validations:
+      required: true
+
+  - type: input
+    id: author
+    attributes:
+      label: Author
+      description: Your name or GitHub username
+      placeholder: e.g., @username
+    validations:
+      required: true
+
+  - type: input
+    id: repository
+    attributes:
+      label: Repository URL
+      description: Link to the plugin's repository (if separate from this submission)
+      placeholder: https://github.com/username/plugin-name
+
+  - type: input
+    id: documentation
+    attributes:
+      label: Documentation URL
+      description: Link to detailed documentation (if hosted externally)
+      placeholder: https://docs.example.com/plugin-name
+
+  - type: input
+    id: demo
+    attributes:
+      label: Demo/Example URL
+      description: Link to a demo or example usage (if available)
+      placeholder: https://example.com/demo
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: List any external dependencies or requirements
+      placeholder: |
+        - Node.js >= 16.0.0
+        - External API key required
+        - etc.
+
+  - type: textarea
+    id: installation
+    attributes:
+      label: Installation Instructions
+      description: Provide step-by-step installation instructions
+      placeholder: |
+        1. Clone the repository
+        2. Run npm install
+        3. Configure settings in...
+    validations:
+      required: true
+
+  - type: textarea
+    id: configuration
+    attributes:
+      label: Configuration
+      description: Describe any configuration options or setup required
+      placeholder: |
+        Configuration options:
+        - option1: description
+        - option2: description
+
+  - type: dropdown
+    id: license
+    attributes:
+      label: License
+      description: What license is your plugin released under?
+      options:
+        - MIT
+        - Apache 2.0
+        - GPL-3.0
+        - BSD-3-Clause
+        - ISC
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: license-other
+    attributes:
+      label: License (if Other)
+      description: Specify the license if you selected "Other" above
+      placeholder: e.g., Custom License
+
+  - type: input
+    id: synapse-version
+    attributes:
+      label: Minimum Synapse Version
+      description: What's the minimum version of Synapse required?
+      placeholder: e.g., 2.0.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: stability
+    attributes:
+      label: Stability Level
+      description: What's the current stability of your plugin?
+      options:
+        - Experimental - Early development, API may change
+        - Beta - Feature complete, needs testing
+        - Stable - Production ready
+        - Mature - Well-tested, widely used
+    validations:
+      required: true
+
+  - type: textarea
+    id: testing
+    attributes:
+      label: Testing
+      description: Describe how you've tested this plugin
+      placeholder: |
+        - Unit tests covering X% of code
+        - Tested on Windows/Mac/Linux
+        - Tested with Synapse versions...
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots/Examples
+      description: Add screenshots or examples of your plugin in action
+      placeholder: Paste screenshots or example code here
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Submission Checklist
+      description: Please confirm all requirements are met
+      options:
+        - label: Plugin follows the Synapse plugin structure and conventions
+          required: true
+        - label: README.md is included with comprehensive documentation
+          required: true
+        - label: package.json includes all required metadata
+          required: true
+        - label: Plugin has been tested and works as expected
+          required: true
+        - label: Code follows best practices and is well-commented
+          required: true
+        - label: No security vulnerabilities or malicious code
+          required: true
+        - label: License is clearly specified
+          required: true
+        - label: All dependencies are documented
+          required: true
+        - label: Examples or usage documentation is provided
+          required: true
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional Notes
+      description: Any other information reviewers should know?
+      placeholder: Additional context...

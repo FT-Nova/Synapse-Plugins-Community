@@ -1,0 +1,14 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Synapse Documentation
+    url: https://github.com/FTMahringer/Synapse/tree/main/docs
+    about: Visit the official Synapse documentation for guides and API references
+  - name: Community Discussions
+    url: https://github.com/FTMahringer/Synapse/discussions
+    about: Join the community discussions for questions, ideas, and support
+  - name: Main Synapse Repository
+    url: https://github.com/FTMahringer/Synapse
+    about: Visit the main Synapse repository for core platform issues
+  - name: Plugin Development Guide
+    url: https://github.com/FTMahringer/Synapse/blob/main/CONTRIBUTING.md
+    about: Learn how to develop plugins for Synapse
