@@ -78,3 +78,6 @@ git clone https://github.com/FTMahringer/Synapse-plugin-template.git my-plugin
 ## License
 
 Community plugins have their own licenses. Check each plugin's LICENSE file.
+
+<!-- FT-Nova contributor -->
+
